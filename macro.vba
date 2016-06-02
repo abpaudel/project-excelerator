@@ -5,7 +5,8 @@ Private Sub CommandButton1_Click()
 Dim x As Workbook
 Dim y As Workbook
 
-Dim i As Integer
+Dim lastrow As Long
+Dim i As Long
 Dim j As Integer
 
 Dim file As String
@@ -34,8 +35,6 @@ x.Sheets(1).Columns("G:G").Select
 With Selection
     .HorizontalAlignment = xlCenter
 End With
-    
-Dim lastrow As Integer
 
 lastrow = x.Sheets(1).Range("A1").CurrentRegion.Rows.Count
 
@@ -112,7 +111,8 @@ Private Sub CommandButton2_Click()
 Dim x As Workbook
 Dim y As Workbook
 
-Dim i As Integer
+Dim lastrow As Long
+Dim i As Long
 Dim j As Integer
 
 Dim file As String
@@ -147,8 +147,6 @@ x.Sheets(1).Columns("C:F").EntireColumn.Delete
 x.Sheets(1).Columns("E:E").Cut
 x.Sheets(1).Columns("C:C").Select
 Selection.Insert Shift:=xlToRight
-
-Dim lastrow As Integer
 
 lastrow = x.Sheets(1).Range("A1").CurrentRegion.Rows.Count
 
